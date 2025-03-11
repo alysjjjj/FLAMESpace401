@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lightGreen"
+    android:padding="20dp"
+    tools:context=".user.Reservation">
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="1dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/backButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="8dp"
+            android:padding="15dp"
+            app:tint="@color/new_darkGreen"
+            android:src="@drawable/ic_arrow_back_white"
+            android:layout_gravity="center"
+            android:contentDescription="@string/back_button"
+            tools:ignore="RtlSymmetry" />
+    </FrameLayout>
+
+
+    <TextView
+        android:id="@+id/tit_reservation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:contentDescription="@string/reservation"
+        android:fontFamily="@font/lemonmilk"
+        android:padding="20dp"
+        android:text="@string/reservation"
+        android:textAlignment="center"
+        android:textColor="@color/new_darkGreen"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/room_code"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/gilgan"
+        android:text="@string/roomptc_301"
+        android:textSize="20sp"
+        android:layout_marginTop="-20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tit_reservation" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_reservation"
+        android:layout_width="300dp"
+        android:layout_height="411dp"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@color/darkGreen"
+        android:padding="20dp"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/room_code">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="310dp"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/tv_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/gilgan"
+                android:text="Start Time"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <LinearLayout
+                android:layout_width="260dp"
+                android:layout_height="56dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/custom_edittxt"
+                android:backgroundTint="@color/white"
+                android:orientation="horizontal"
+                android:paddingStart="18dp"
+                tools:ignore="RtlSymmetry">
+
+                <EditText
+                    android:id="@+id/timePicker"
+                    android:layout_width="225dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:clickable="true"
+                    android:drawableEnd="@drawable/baseline_keyboard_arrow_down_24"
+                    android:drawablePadding="8dp"
+                    android:focusable="false"
+                    android:hint="Select Time" />
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/tv_time_end"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/gilgan"
+                android:text="End Time"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:layout_width="260dp"
+                android:layout_height="56dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/custom_edittxt"
+                android:backgroundTint="@color/white"
+                android:orientation="horizontal"
+                android:paddingStart="18dp"
+                tools:ignore="RtlSymmetry">
+
+                <EditText
+                    android:id="@+id/timePickerEditText"
+                    android:layout_width="225dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:clickable="true"
+                    android:drawableEnd="@drawable/baseline_keyboard_arrow_down_24"
+                    android:drawablePadding="8dp"
+                    android:focusable="false"
+                    android:hint="Select Time" />
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/tv_purpose"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/gilgan"
+                android:text="@string/subject_text"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/subject_edittext"
+                android:layout_width="260dp"
+                android:layout_height="56dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/custom_edittxt"
+                android:backgroundTint="@color/white"
+                android:ems="10"
+                android:hint="@string/ex_gen_001"
+                android:inputType="text"
+                android:maxLines="1"
+                android:paddingStart="15dp"
+                tools:ignore="RtlSymmetry"
+                android:autofillHints="" />
+
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/btnreserve"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="18dp"
+        style="@style/ButtonGreen"
+        android:text="@string/reserve"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cv_reservation" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

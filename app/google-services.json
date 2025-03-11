@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "148161161596",
+    "project_id": "flamespace-590f0",
+    "storage_bucket": "flamespace-590f0.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:148161161596:android:da9bdb71cbe53c2508dcf9",
+        "android_client_info": {
+          "package_name": "com.example.flamespace"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDURRL1z28rtVlQd8nO5SEc8Rwz0VmZSCo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

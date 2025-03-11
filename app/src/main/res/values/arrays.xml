@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="preloaded_fonts">
+        <item>@font/gilgan2</item>
+
+    </array>
+
+    <string-array name="time_options">
+        <item>7:30 AM </item>
+        <item>80:00 AM </item>
+        <item>9:00 AM </item>
+        <item>9:30 AM </item>
+        <item>10:00 AM </item>
+        <item>10:30 AM </item>
+        <item>11:00 AM </item>
+        <item>11:30 AM </item>
+        <item>12:00 PM </item>
+        <item>12:30 PM </item>
+        <item>1:00 PM </item>
+        <item>1:30 PM </item>
+        <item>2:00 PM </item>
+        <item>2:30 PM </item>
+        <item>3:00 PM </item>
+        <item>3:30 PM </item>
+        <item>4:00 PM </item>
+        <item>4:30 PM </item>
+        <item> 5:00 PM</item>
+        <item> 5:30 PM</item>
+    </string-array>
+
+    <string-array name="time_ends">
+        <item>8:00 AM </item>
+        <item>9:00 AM </item>
+        <item>9:30 AM </item>
+        <item>10:00 AM </item>
+        <item>10:30 AM </item>
+        <item>11:00 AM </item>
+        <item>11:30 AM </item>
+        <item>12:00 PM </item>
+        <item>12:30 PM </item>
+        <item>1:00 PM </item>
+        <item>1:30 PM </item>
+        <item>2:00 PM </item>
+        <item>2:30 PM </item>
+        <item>3:00 PM </item>
+        <item>3:30 PM </item>
+        <item>4:00 PM </item>
+        <item>4:30 PM </item>
+        <item> 5:00 PM</item>
+        <item> 5:30 PM</item>
+        <item> 6:00 PM</item>
+
+    </string-array>
+
+    <string-array name="department_options">
+        <item>CITE</item>
+        <item>CEA</item>
+        <item>CMA</item>
+        <item>CCJE</item>
+        <item>CAS</item>
+        <item>CAHS</item>
+
+    </string-array>
+
+    <string-array name="set_up">
+        <item>Mr.</item>
+        <item>Ms.</item>
+        <item>Mrs.</item>
+        <item>Mx.</item>
+    </string-array>
+
+    <string-array name="title_choices">
+        <item>Mr.</item>
+        <item>Mrs.</item>
+        <item>Ms.</item>
+    </string-array>
+
+</resources>

@@ -1,0 +1,346 @@
+<resources>
+    <string name="app_name">FLAMESpace</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="student">Student</string>
+    <string name="instructor">Instructor</string>
+    <string name="todo">TODO</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="sign_in">Sign in</string>
+    <string name="no_account">No account?</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="todoo">TODO</string>
+    <string name="todooo">TODO</string>
+    <string name="todo1">TODO</string>
+    <string name="be">BE</string>
+    <string name="cahs">CAHS</string>
+    <string name="building">BUILDINGS</string>
+    <string name="nh">NH</string>
+    <string name="ptc">PTC</string>
+    <string name="ptc_rooms">PTC ROOMS</string>
+    <string name="mba">MBA</string>
+    <string name="vv">TODO</string>
+    <string name="cma">CMA</string>
+    <string name="account">Account</string>
+    <string name="jan_01_2020">JAN 01 2020</string>
+    <string name="cancel">Cancel</string>
+    <string name="current_reservation">CURRENT RESERVATION</string>
+    <string name="subject">Subject</string>
+    <string name="enter_your_name">Enter your name</string>
+    <string name="enter_your_block">Enter your block</string>
+    <string name="enter_your_new_password">Enter your new password</string>
+    <string name="save">Save</string>
+    <string name="name">Name</string>
+    <string name="block">UP–FC1–BSIT2–06</string>
+    <string name="current_block">Current Block</string>
+    <string name="history">HISTORY</string>
+    <string name="his">History</string>
+    <string name="second_fragment_label">\n</string>
+    <string name="main_logo" />
+    <string name="doneandcancel">\n</string>
+    <string name="basic_education">BASIC EDUCATION</string>
+    <string name="be_124">BE 124</string>
+    <string name="be_123">BE 123</string>
+    <string name="cmaa">CMA</string>
+    <string name="mba_308">MBA 308</string>
+    <string name="mba_307">MBA 307</string>
+    <string name="nh_112">NH 112</string>
+    <string name="nh_111">NH 111</string>
+    <string name="ptc_406">PTC 406</string>
+    <string name="ptc_405">PTC 405</string>
+    <string name="ptc_404">PTC 404</string>
+    <string name="ptc_403">PTC 403</string>
+    <string name="ptc_306">PTC 306</string>
+    <string name="ptc_305">PTC 305</string>
+    <string name="ptc_304">PTC 304</string>
+    <string name="ptc_303">PTC 303</string>
+    <string name="ptc_301">PTC 301</string>
+    <string name="ptc_201">PTC 201</string>
+    <string name="ptcc">PTC</string>
+    <string name="ptc_303S">PTC 303</string>
+    <string name="ptc_302">PTC 302</string>
+    <string name="log_in">LOG IN</string>
+    <string name="sign_upP">SIGN UP</string>
+    <string name="sign_upPP">SIGN UP</string>
+    <string name="full_name">Full name</string>
+    <string name="create_new_account">create new account</string>
+    <string name="student_id">Student ID</string>
+    <string name="phinma_email">PHINMA Email</string>
+    <string name="passwordD">Password</string>
+    <string name="re_password">Re-password</string>
+    <string name="sign_ups">SIGN UP</string>
+    <string name="log_inX">LOG IN</string>
+    <string name="log_in_your_account">Log in your account</string>
+    <string name="emailx">Email</string>
+    <string name="passwordX">Password</string>
+    <string name="log_inc">LOG IN</string>
+    <string name="don_t_have_an_account">Don\'t have an account?</string>
+    <string name="reservation">RESERVATION</string>
+    <string name="cahss">CAHS</string>
+    <string name="mbaa">MBA</string>
+    <string name="nhh">NH</string>
+    <string name="pttc_301">PTC 301</string>
+    <string name="passwordd">Password</string>
+    <string name="todod">TODO</string>
+    <string name="roomptc_301">PTC 301</string>
+    <string name="date">Date</string>
+    <string name="time">Time</string>
+    <string name="set_time">Set Time</string>
+    <string name="purpose">Purpose</string>
+    <string name="name_of_instructor">Name of Instructor</string>
+    <string name="blockr">Block</string>
+    <string name="txtsubject">Subject</string>
+    <string name="subjecttxt">Subject</string>
+    <string name="number_of_students">Number of Students</string>
+    <string name="confirm">CONFIRM</string>
+    <string name="other_details">Other details</string>
+    <string name="logo">TODO</string>
+    <string name="profile">TODO</string>
+    <string name="cite">TODO</string>
+    <string name="ptcbuilding">PTC</string>
+    <string name="cmabulding">CMA</string>
+    <string name="buildingmba">MBA</string>
+    <string name="nh_bulding">NH</string>
+    <string name="cahs_building">CAHS</string>
+    <string name="be_buil">BE</string>
+    <string name="image_profile">image_profile</string>
+    <string name="elyssa_salvador">Elyssa Salvador</string>
+    <string name="backbtn">backbtn</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="edit_prof">edit_prof</string>
+    <string name="current_reservationbtn">Current Reservation</string>
+    <string name="currentbtn">currentbtn</string>
+    <string name="historybtn">History</string>
+    <string name="history_btn">history_btn</string>
+    <string name="blk_6">BLK 6</string>
+    <string name="log_out">Log out</string>
+
+    <string name="reserve">RESERVE</string>
+
+    <string name="done">Done</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="lorem_ipsum">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam in scelerisque sem. Mauris
+        volutpat, dolor id interdum ullamcorper, risus dolor egestas lectus, sit amet mattis purus
+        dui nec risus. Maecenas non sodales nisi, vel dictum dolor. Class aptent taciti sociosqu ad
+        litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse blandit eleifend
+        diam, vel rutrum tellus vulputate quis. Aliquam eget libero aliquet, imperdiet nisl a,
+        ornare ex. Sed rhoncus est ut libero porta lobortis. Fusce in dictum tellus.\n\n
+        Suspendisse interdum ornare ante. Aliquam nec cursus lorem. Morbi id magna felis. Vivamus
+        egestas, est a condimentum egestas, turpis nisl iaculis ipsum, in dictum tellus dolor sed
+        neque. Morbi tellus erat, dapibus ut sem a, iaculis tincidunt dui. Interdum et malesuada
+        fames ac ante ipsum primis in faucibus. Curabitur et eros porttitor, ultricies urna vitae,
+        molestie nibh. Phasellus at commodo eros, non aliquet metus. Sed maximus nisl nec dolor
+        bibendum, vel congue leo egestas.\n\n
+        Sed interdum tortor nibh, in sagittis risus mollis quis. Curabitur mi odio, condimentum sit
+        amet auctor at, mollis non turpis. Nullam pretium libero vestibulum, finibus orci vel,
+        molestie quam. Fusce blandit tincidunt nulla, quis sollicitudin libero facilisis et. Integer
+        interdum nunc ligula, et fermentum metus hendrerit id. Vestibulum lectus felis, dictum at
+        lacinia sit amet, tristique id quam. Cras eu consequat dui. Suspendisse sodales nunc ligula,
+        in lobortis sem porta sed. Integer id ultrices magna, in luctus elit. Sed a pellentesque
+        est.\n\n
+        Aenean nunc velit, lacinia sed dolor sed, ultrices viverra nulla. Etiam a venenatis nibh.
+        Morbi laoreet, tortor sed facilisis varius, nibh orci rhoncus nulla, id elementum leo dui
+        non lorem. Nam mollis ipsum quis auctor varius. Quisque elementum eu libero sed commodo. In
+        eros nisl, imperdiet vel imperdiet et, scelerisque a mauris. Pellentesque varius ex nunc,
+        quis imperdiet eros placerat ac. Duis finibus orci et est auctor tincidunt. Sed non viverra
+        ipsum. Nunc quis augue egestas, cursus lorem at, molestie sem. Morbi a consectetur ipsum, a
+        placerat diam. Etiam vulputate dignissim convallis. Integer faucibus mauris sit amet finibus
+        convallis.\n\n
+        Phasellus in aliquet mi. Pellentesque habitant morbi tristique senectus et netus et
+        malesuada fames ac turpis egestas. In volutpat arcu ut felis sagittis, in finibus massa
+        gravida. Pellentesque id tellus orci. Integer dictum, lorem sed efficitur ullamcorper,
+        libero justo consectetur ipsum, in mollis nisl ex sed nisl. Donec maximus ullamcorper
+        sodales. Praesent bibendum rhoncus tellus nec feugiat. In a ornare nulla. Donec rhoncus
+        libero vel nunc consequat, quis tincidunt nisl eleifend. Cras bibendum enim a justo luctus
+        vestibulum. Fusce dictum libero quis erat maximus, vitae volutpat diam dignissim.
+    </string>
+
+    <string name="login_title">LOG IN</string>
+    <string name="login_sub_title">
+        <font color="#99BC85"><b>Login</b></font>
+        if you already have an account.
+    </string>
+    <string name="login_email">PHINMA Email or Student ID</string>
+    <string name="login_password">Password</string>
+    <string name="login_forgot_pw">Forgot Password?</string>
+    <string name="login_havent_account">
+        I don\'t have an account
+        <font color="#99BC85"><b>Sign Up</b></font>
+    </string>
+
+    <string name="signup_title">SIGN UP</string>
+    <string name="signup_sub_title">
+        <font color="#99BC85"><b>Register</b></font>
+        to get started.
+    </string>
+    <string name="signup_have_account">
+        I have an account.
+        <font color="#99BC85"><b>Log In</b></font>
+    </string>
+
+    <string name="forgot_password">Forgot Password</string>
+    <string name="reset_password">Reset Password</string>
+
+    <string name="forgot_title">FORGOT PASSWORD</string>
+    <string name="forgot_sub_title">
+        Enter your email to
+        <font color="#99BC85"><b>reset your password.</b></font>
+    </string>
+
+
+    <string name="signup_first_name">First Name</string>
+    <string name="signup_middle_name">Middle Name</string>
+    <string name="signup_last_name">Last Name</string>
+    <string name="signup_student_id">Student ID</string>
+    <string name="signup_phinma_email">PHINMA Email</string>
+    <string name="title_sign_up">SIGN UP</string>
+    <string name="signup_re_password">Re-type Password</string>
+    <string name="tv_capacity">50 people capacity</string>
+
+    <string name="be_des">BE Building</string>
+    <string name="cahs_des">CAHS Building</string>
+    <string name="cma_des">CMA Building</string>
+    <string name="mba_des">MBA Building</string>
+    <string name="nh_des">NH Building</string>
+    <string name="ptc_des">PTC Building</string>
+
+    <string name="be_title">BASIC EDUCATION</string>
+    <string name="cahs_title">COLLEGE OF ALLIED HOSPITALITY AND SCIENCE</string>
+    <string name="cma_title">COLLEGE OF MANAGEMENT AND ACCOUNTANCY</string>
+    <string name="mba_title">MBA</string>
+    <string name="nh_title">NORTH HALL</string>
+    <string name="ptc_title">PTC</string>
+
+    <!-- DESCRIPTIONS -->
+
+    <string name="law_room">Law Room</string>
+    <string name="class_room">Standard Classroom</string>
+    <string name="computer_room">Computer Lab</string>
+    <string name="science_room">Science Lab</string>
+
+    <string name="current_image">Current Image</string>
+
+    <string name="room_code_example">PTC 201</string>
+    <string name="sched_example">7:30 am - 9:00 am</string>
+
+    <string name="ptc201">PTC 201</string>
+    <string name="ptc301">PTC 301</string>
+    <string name="ptc302">PTC 302</string>
+    <string name="ptc303">PTC 303</string>
+    <string name="ptc304">PTC 304</string>
+    <string name="ptc305">PTC 305</string>
+    <string name="ptc306">PTC 306</string>
+    <string name="ptc403">PTC 403</string>
+    <string name="ptc404">PTC 404</string>
+    <string name="ptc405">PTC 405</string>
+    <string name="ptc406">PTC 406</string>
+
+    <string name="nh111">NH 111</string>
+    <string name="nh112">NH 112</string>
+    <string name="nh113">NH 113</string>
+    <string name="nh114">NH 114</string>
+    <string name="nh115">NH 115</string>
+    <string name="nh116">NH 116</string>
+    <string name="nh117">NH 117</string>
+    <string name="nh118">NH 118</string>
+    <string name="nh119">NH 119</string>
+    <string name="nh120">NH 120</string>
+
+    <string name="mba307">MBA 307</string>
+    <string name="mba308">MBA 308</string>
+    <string name="mba309">MBA 309</string>
+    <string name="mba310">MBA 310</string>
+    <string name="mba405">MBA 405</string>
+    <string name="mba406">MBA 406</string>
+    <string name="mba407">MBA 407</string>
+    <string name="mba504">MBA 504</string>
+    <string name="mba505">MBA 505</string>
+    <string name="mba506">MBA 506</string>
+
+
+    <string name="cma123">CMA 123</string>
+    <string name="cma124">CMA 124</string>
+    <string name="cma125">CMA 125</string>
+    <string name="cma126">CMA 126</string>
+    <string name="cma127">CMA 127</string>
+    <string name="cma323">CMA 323</string>
+    <string name="cma324">CMA 324</string>
+    <string name="cma325">CMA 325</string>
+    <string name="cma326">CMA 326</string>
+    <string name="cma327">CMA 327</string>
+
+    <string name="cahs123">CAHS 123</string>
+    <string name="cahs124">CAHS 124</string>
+    <string name="cahs125">CAHS 125</string>
+    <string name="cahs223">CAHS 223</string>
+    <string name="cahs224">CAHS 224</string>
+    <string name="cahs225">CAHS 225</string>
+    <string name="cahs323">CAHS 323</string>
+    <string name="cahs324">CAHS 324</string>
+    <string name="cahs325">CAHS 325</string>
+    <string name="cahs326">CAHS 326</string>
+
+    <string name="be121">BE 121</string>
+    <string name="be122">BE 122</string>
+    <string name="be123">BE 123</string>
+    <string name="be124">BE 124</string>
+    <string name="be221">BE 221</string>
+    <string name="be222">BE 222</string>
+    <string name="be223">BE 223</string>
+    <string name="be224">BE 224</string>
+    <string name="be321">BE 321</string>
+    <string name="be322">BE 322</string>
+
+    <string name="next_schedule">Schedule</string>
+    <string name="next_reservation">Reservation</string>
+    <string name="back_button">Back Button</string>
+    <string name="department">Department</string>
+    <string name="cite_department">CITE</string>
+    <string name="cma_323">CMA 323</string>
+    <string name="_50_chairs_n1_aircon_working">50 chairs\n1 aircon working</string>
+    <string name="reservebtn">Reserve</string>
+    <string name="_50_chairs_1_aircon_working">50 chairs\n1 aircon working</string>
+    <string name="cma_323_TXT">CMA 323</string>
+    <string name="_50_chairs_n1_aircon_working_">50 chairs\n1 aircon working</string>
+    <string name="reserve_">Reserve</string>
+    <string name="enter_your_department">Enter your Department</string>
+    <string name="default_notification_channel_id">your_channel_id</string>
+    <string name="subject_">Subject</string>
+    <string name="subject_text">Subject</string>
+    <string name="mat">MAT</string>
+    <string name="cancelbtn">Cancel</string>
+    <string name="buildings">BUILDINGS</string>
+    <string name="ptc_201_room">PTC 201</string>
+    <string name="cancel_btn">Cancel</string>
+    <string name="logout_btn">Logout</string>
+    <string name="are_you_sure_you_want_nto_log_out">Are you sure you want \nto log out?</string>
+    <string name="edit_picture_btn">Edit profile</string>
+    <string name="edit_picture">Edit picture</string>
+    <string name="cancel_">Cancel</string>
+    <string name="elyssa_salvador_">Elyssa Salvador</string>
+    <string name="set_name">Set Name</string>
+    <string name="set_your_department">Set your department</string>
+    <string name="name_enter">Name</string>
+    <string name="mr">Mr.</string>
+    <string name="time_ends">Time ends</string>
+    <string name="ex_gen_001">Ex. GEN 001</string>
+    <string name="email_">Email</string>
+    <string name="email_text">Email</string>
+    <string name="emailtxt">Email</string>
+    <string name="email_txt">Email</string>
+    <string name="txt">Email</string>
+    <string name="emailtext">Email</string>
+    <string name="change_password">Change password</string>
+    <string name="re_type_new_password">Re- type new password</string>
+    <string name="current_password">Current password</string>
+    <string name="new_password">New password</string>
+    <string name="type_your_current_password_and_new_password">Type your current password and new password.</string>
+    <string name="change_password_">Change password</string>
+    <string name="save_password">Save Password</string>
+
+</resources>

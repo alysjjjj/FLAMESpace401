@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Define the shape of the background (e.g., rectangle) -->
+    <corners android:radius="20dp" />
+
+    <!-- Define the base color of the background with some transparency -->
+    <solid android:color="#80000000" />
+
+    <!-- You can also apply a gradient to the background if desired -->
+    <!-- <gradient
+        android:startColor="#80000000"
+        android:endColor="#00000000"
+        android:angle="90" /> -->
+</shape>
