@@ -2,87 +2,135 @@ package com.example.flamespace.user
 
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
+import android.widget.Button
+import android.widget.EditText
+import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.example.flamespace.R
 import com.example.flamespace.buildings.Home
-import com.example.flamespace.databinding.ActivitySignInBinding
-import com.example.flamespace.retrofit.LoginResponse
-import com.example.flamespace.retrofit.LoginUser
-import com.example.flamespace.retrofit.RetrofitHelper
-import org.json.JSONObject
-import retrofit2.Call
-import retrofit2.Callback
-import retrofit2.Response
+import com.example.flamespace.retrofit.SharedPreferencesManager
+import com.google.firebase.database.*
+import okhttp3.*
+import java.io.IOException
 
 class SignIn : AppCompatActivity() {
 
-    private lateinit var binding: ActivitySignInBinding
+    private lateinit var database: DatabaseReference
+    private lateinit var etPhone: EditText  // New phone field
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivitySignInBinding.inflate(layoutInflater)
-        setContentView(binding.root)
+        setContentView(R.layout.activity_sign_in)
 
-        binding.btnLogin.setOnClickListener {
-            val email = binding.etEmail.text.toString().trim()
-            val password = binding.etPassword.text.toString().trim()
+        // Initialize Firebase reference
+        database = FirebaseDatabase.getInstance("https://flames-a63e3-default-rtdb.firebaseio.com/").reference.child("users")
+
+        val etEmail = findViewById<EditText>(R.id.et_email)
+        etPhone = findViewById(R.id.et_phone) // Ensure this exists in your layout
+        val etPassword = findViewById<EditText>(R.id.et_password)
+        val btnLogin = findViewById<Button>(R.id.btn_login)
+        val tvHaventAccount = findViewById<TextView>(R.id.tv_havent_account)
+        val tvForgotPw = findViewById<TextView>(R.id.tv_forgot_pw)
+
+        btnLogin.setOnClickListener {
+            val email = etEmail.text.toString().trim()
+            val phone = etPhone.text.toString().trim()
+            val password = etPassword.text.toString().trim()
 
             if (email.isEmpty() || password.isEmpty()) {
-                Toast.makeText(this, "Please fill in all the fields", Toast.LENGTH_SHORT).show()
-            } else {
-                // Call the login API
-                loginUser(email, password)
+                showToast("Please fill in all required fields")
+                return@setOnClickListener
             }
-        }
 
-        binding.tvHaventAccount.setOnClickListener {
-            startActivity(Intent(this, Home::class.java))
+            loginUserXampp(email, phone, password)
         }
-
-        binding.tvForgotPw.setOnClickListener {
+        tvHaventAccount.setOnClickListener {
+            startActivity(Intent(this, Signup::class.java))
+        }
+        tvForgotPw.setOnClickListener {
             startActivity(Intent(this, ForgotActivity::class.java))
         }
     }
 
-    private fun loginUser(email: String, password: String) {
-        val apiService = RetrofitHelper.getService()
-        val call = apiService.loginUser(LoginUser(email = email, password = password))
+    private fun loginUserXampp(email: String, phone: String, password: String) {
+        val client = OkHttpClient()
+        val formBody = FormBody.Builder()
+            .add("email", email)
+            .add("password", password)
+            .build()
 
-        call.enqueue(object : Callback<LoginResponse> {
-            override fun onResponse(call: Call<LoginResponse>, response: Response<LoginResponse>) {
-                try {
-                    if (response.isSuccessful) {
-                        val loginResponse = response.body()
-                        if (loginResponse != null) {
-                            val authToken = "Bearer ${loginResponse.token}"
-                            val intent = Intent(this@SignIn, Home::class.java)
-                            intent.putExtra("authToken", authToken)
-                            startActivity(intent)
-                            finish()
-                            // Add toast for successful login
-                            Toast.makeText(this@SignIn, "Login successful", Toast.LENGTH_SHORT).show()
-                        } else {
-                            // Handle null response body
-                            Toast.makeText(this@SignIn, "Login failed", Toast.LENGTH_SHORT).show()
-                        }
-                    } else {
-                        // Handle unsuccessful response
-                        val errorBody = response.errorBody()?.string()
-                        val errorMessage = JSONObject(errorBody).getString("message")
-                        Toast.makeText(this@SignIn, errorMessage, Toast.LENGTH_SHORT).show()
-                    }
-                } catch (e: Exception) {
-                    Log.e("SignInActivity", "Error during login: ${e.message}", e)
-                    Toast.makeText(this@SignIn, "An error occurred. Please try again", Toast.LENGTH_SHORT).show()
+        val request = Request.Builder()
+            .url("http://192.168.1.7/flames/login.php") // Update with your actual URL
+            .post(formBody)
+            .build()
+
+        client.newCall(request).enqueue(object : Callback {
+            override fun onFailure(call: Call, e: IOException) {
+                runOnUiThread {
+                    showToast("Error connecting to server: ${e.message}")
                 }
             }
 
-            override fun onFailure(call: Call<LoginResponse>, t: Throwable) {
-                Log.e("SignInActivity", "Network error: ${t.message}", t)
-                Toast.makeText(this@SignIn, "Network error. Please try again", Toast.LENGTH_SHORT).show()
+            override fun onResponse(call: Call, response: Response) {
+                val responseBody = response.body?.string()
+                runOnUiThread {
+                    if (response.isSuccessful && responseBody == "Login successful") {
+                        loginUserFirebase(email, phone, password)
+                    } else {
+                        showToast("Login failed: $responseBody")
+                    }
+                }
             }
         })
     }
 
+    private fun loginUserFirebase(email: String, phone: String, password: String) {
+        database.orderByChild("email").equalTo(email)
+            .addListenerForSingleValueEvent(object : ValueEventListener {
+                override fun onDataChange(snapshot: DataSnapshot) {
+                    if (snapshot.exists()) {
+                        for (userSnap in snapshot.children) {
+                            val storedPassword = userSnap.child("password").getValue(String::class.java)
+                            val userId = userSnap.child("id").getValue(String::class.java)
+                            val username = userSnap.child("name").getValue(String::class.java)
+                            val storedPhone = userSnap.child("phone").getValue(String::class.java)
+
+                            if (storedPassword == password) {
+                                // If the phone is not stored and a phone number is provided, update it
+                                if ((storedPhone == null || storedPhone.isEmpty()) && phone.isNotEmpty()) {
+                                    database.child(userSnap.key!!).child("phone").setValue(phone)
+                                }
+                                SharedPreferencesManager.saveUserDetails(
+                                    this@SignIn, userId ?: "", username ?: "", email
+                                )
+                                navigateToVerification(userId ?: "")
+                                return
+                            } else {
+                                showToast("Invalid password")
+                                return
+                            }
+                        }
+                    } else {
+                        showToast("User not found")
+                    }
+                }
+
+                override fun onCancelled(error: DatabaseError) {
+                    showToast("Database error: ${error.message}")
+                }
+            })
+    }
+
+    private fun navigateToVerification(userId: String) {
+        showToast("Login successful! Redirecting to OTP verification.")
+        val intent = Intent(this, LoginVerification::class.java)
+        intent.putExtra("userId", userId)
+        startActivity(intent)
+        finish()
+    }
+
+    private fun showToast(message: String) {
+        Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
+    }
 }

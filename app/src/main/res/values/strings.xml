@@ -342,5 +342,6 @@
     <string name="type_your_current_password_and_new_password">Type your current password and new password.</string>
     <string name="change_password_">Change password</string>
     <string name="save_password">Save Password</string>
+    <string name="phone_number" />
 
 </resources>

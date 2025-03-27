@@ -7,7 +7,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 interface RetrofitHelper {
     companion object{
-        private const val BASE_URL = "https://tender-lands-fly.loca.lt/"
+        private const val BASE_URL = "https://slimy-flowers-remain.loca.lt/"
 
         fun getService(): ServiceAPI{
             val loggingInterceptor = HttpLoggingInterceptor().apply{
