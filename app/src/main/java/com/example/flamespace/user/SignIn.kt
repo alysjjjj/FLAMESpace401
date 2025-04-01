@@ -23,7 +23,7 @@ class SignIn : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sign_in)
 
-        // Initialize Firebasse reference
+        // Initialize Firebase reference
         database = FirebaseDatabase.getInstance("https://flamespace-590f0-default-rtdb.firebaseio.com/").reference.child("users")
 
         val etEmail = findViewById<EditText>(R.id.et_email)
