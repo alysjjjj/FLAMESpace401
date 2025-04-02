@@ -71,7 +71,7 @@ class Signup : AppCompatActivity() {
             .build()
 
         val request: Request = Request.Builder()
-            .url("http://192.168.1.7/flames/register.php")
+            .url("http://192.168.43.87/flames/register.php")
             .post(formBody)
             .build()
 
@@ -98,7 +98,7 @@ class Signup : AppCompatActivity() {
 
     private fun saveUserToFirebase(name: String, email: String, password: String) {
         val database =
-            FirebaseDatabase.getInstance("https://flames-a63e3-default-rtdb.firebaseio.com/")
+            FirebaseDatabase.getInstance("https://flamespace-590f0-default-rtdb.firebaseio.com/")
         val userId = database.getReference("users").push().key
 
         if (userId == null) {

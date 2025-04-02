@@ -24,7 +24,7 @@ class SignIn : AppCompatActivity() {
         setContentView(R.layout.activity_sign_in)
 
         // Initialize Firebase reference
-        database = FirebaseDatabase.getInstance("https://flames-a63e3-default-rtdb.firebaseio.com/").reference.child("users")
+        database = FirebaseDatabase.getInstance("https://flamespace-590f0-default-rtdb.firebaseio.com/").reference.child("users")
 
         val etEmail = findViewById<EditText>(R.id.et_email)
         etPhone = findViewById(R.id.et_phone) // Ensure this exists in your layout
@@ -61,7 +61,7 @@ class SignIn : AppCompatActivity() {
             .build()
 
         val request = Request.Builder()
-            .url("http://192.168.1.7/flames/login.php") // Update with your actual URL
+            .url("http://192.168.43.87/flames/login.php") // Update with your actual URL
             .post(formBody)
             .build()
 
