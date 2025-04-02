@@ -41,7 +41,7 @@ class MainActivity : AppCompatActivity() {
     }
 
 //    private fun writeMessage() {
-//        val database = Firebase.database
+//        val sdatabase = Firebase.database
 //        val myRef = database.getReference("message")
 //        myRef.setValue("Hello")
 //    }

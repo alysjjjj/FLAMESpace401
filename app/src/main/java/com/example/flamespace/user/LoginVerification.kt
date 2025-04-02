@@ -25,7 +25,7 @@ import java.io.IOException
 
 class LoginVerification : AppCompatActivity() {
 
-    // Use your Flamespace Firebase URL here
+
     private val database = FirebaseDatabase.getInstance("https://flamespace-590f0-default-rtdb.firebaseio.com/").reference
     private var generatedOtp: String = ""
     private lateinit var userPhoneNumber: String

@@ -118,7 +118,7 @@ class Signup : AppCompatActivity() {
                 )
             }
     }
-
+//ss
     private fun navigateToHome() {
         showToast("Registered successfully")
         startActivity(Intent(this, Home::class.java))
